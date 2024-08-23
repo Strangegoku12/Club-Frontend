@@ -1,0 +1,142 @@
+.dashboard {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.dashboard-header {
+    position: fixed;
+    top: 0;
+    left: 20%; /* Adjust as needed for sidebar */
+    right: 0;
+    height: 60px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Keeps the header above other content */
+}
+
+.header-left h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.header-right p {
+    font-size: 25px;
+    margin-right: 80px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.dashboard-content {
+    margin-top: 80px; /* Space for the fixed header */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between boxes */
+}
+
+/* Dashboard box styling */
+.dashboard-box {
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+/* Icon styling */
+.icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.students {
+    background-color: #daf0e1; /* Light green */
+}
+
+.teachers {
+    background-color: #e1ebfb; /* Light blue */
+}
+
+.parents {
+    background-color: #ffe9c6; /* Light orange */
+}
+
+.earnings {
+    background-color: #ffe3e3; /* Light red */
+}
+
+.text p {
+    margin: 0;
+    font-size: 15px;
+    color: #888;
+}
+
+.text h3 {
+    margin: 5px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Media Query for Tablets (768px to 1023px) */
+@media (max-width: 1024px) {
+    .dashboard-header {
+        left: 30%; /* Adjusts for wider sidebar */
+    }
+
+    .dashboard-content {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .dashboard-box {
+        width: 200px;
+        height: 200px;
+        flex: 1 1 calc(50% - 40px); /* 2 columns layout */
+    }
+}
+
+/* Media Query for Phones (up to 767px) */
+@media (max-width: 767px) {
+    .dashboard-header {
+        left: 0; /* Full width for the header on phones */
+    }
+
+    .dashboard-content {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .dashboard-box {
+        width: 200px;
+        height: 200px;
+        flex: 1 1 calc(50% - 40px); /* 2 columns layout */
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .text h3 {
+        font-size: 20px;
+    }
+}

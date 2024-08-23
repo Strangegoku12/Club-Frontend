@@ -1,0 +1,159 @@
+/* StudentsData.css */
+.students-data-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Make header content stack vertically on smaller screens */
+  }
+  
+  .header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .breadcrumb span {
+    margin-right: 5px;
+  }
+  
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .search-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column; /* Stack search inputs on smaller screens */
+  }
+  
+  .search-input,
+  .select-class {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    background-color: #3b3b98;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: stretch; /* Make button full width on smaller screens */
+  }
+  
+  .search-button:hover {
+    background-color: #2a2a72;
+  }
+  
+  .students-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    display: block; /* Make table scrollable on smaller screens */
+  }
+  
+  .students-table th,
+  .students-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Prevent overflow of text */
+  }
+  
+  .students-table th {
+    background-color: #f5f5f5;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Mobile (phones) */
+  @media (max-width: 767px) {
+    .header {
+      flex-direction: column;
+    }
+  
+    .search-filters {
+      flex-direction: column;
+    }
+  
+    .search-input,
+    .select-class,
+    .search-button {
+      width: 100%; /* Full width on mobile */
+    }
+  
+    .students-table {
+      display: block; /* Make table scrollable on mobile */
+    }
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .search-filters {
+      flex-direction: row;
+    }
+  
+    .search-input,
+    .select-class,
+    .search-button {
+      width: auto; /* Auto width on tablets */
+    }
+  }
+  
+  /* Laptop */
+  @media (min-width: 1025px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .search-filters {
+      flex-direction: row;
+    }
+  
+    .search-input,
+    .select-class,
+    .search-button {
+      width: auto;
+    }
+  
+    .students-table {
+      display: table; /* Standard table display */
+    }
+  }
+  
